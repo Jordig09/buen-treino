@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import NavBar from "../../components/NavBar";
-import LoginCard from "../../components/LoginCard";
-import Footer from "../../components/Footer";
+import NavBar from "../../Component/NavBar";
+import LoginCard from "../../Component/LoginCard";
+import Footer from "../../Component/Footer";
 
 function Login() {
   return (
