@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./script/Scenes/home";
-import Login from "./script/Scenes/login";
+import Home from "./script/scenes/home";
+import Login from "./script/scenes/login";
 
 function App() {
   return (
