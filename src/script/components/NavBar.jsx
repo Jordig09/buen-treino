@@ -1,19 +1,20 @@
 import { Container, Navbar, NavDropdown } from "react-bootstrap";
 import PropTypes from "prop-types";
+import running from "../../img/running.png"
 
-function NavBar({ login = true }) {
+function NavBar({ login = true, usuario = "Usuario" }) {
   return (
     <Navbar className="bg-dark text-white">
       <Container>
-        <Navbar.Brand className="text-white" href="/home">
+        <Navbar.Brand className=" text-white " href="/home">
           <img
             alt=""
-            src="https://dummyimage.com/40/ffffff/000000.png&text=Logo"
-            width=""
+            src= {running}
+            width="30px"
             height=""
             className="d-inline-block align-center"
           />{" "}
-          FitApp
+          BuenTreino
         </Navbar.Brand>
         {login === true ? (
           <Navbar.Collapse className="justify-content-end text-white">
@@ -27,10 +28,7 @@ function NavBar({ login = true }) {
                     height=""
                     className="d-inline-block align-center"
                   />{" "}
-                  <a href="#login" className="text-white">
-                    {" "}
-                    Usuario{" "}
-                  </a>
+                  <span className="text-white"> {usuario} </span>
                 </Navbar.Text>
               }
               id="basic-nav-dropdown"
@@ -40,9 +38,7 @@ function NavBar({ login = true }) {
               <NavDropdown.Item href="#action/2">Calendario</NavDropdown.Item>
               <NavDropdown.Item href="#action/3">Grupos</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/4">
-                Cerrar Sesión
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/login">Cerrar Sesión</NavDropdown.Item>
             </NavDropdown>
           </Navbar.Collapse>
         ) : (
