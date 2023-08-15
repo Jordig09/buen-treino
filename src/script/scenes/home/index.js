@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import NavBar from "../../Component/NavBar";
-import HomeCard from "../../Component/HomeCard";
-import Footer from "../../Component/Footer";
+import NavBar from "../../components/NavBar";
+import HomeCard from "../../components/HomeCard";
+import Footer from "../../components/Footer";
 
 function Home() {
   return (

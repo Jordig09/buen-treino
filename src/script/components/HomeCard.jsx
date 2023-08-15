@@ -1,10 +1,5 @@
-import { Link } from "react-router-dom";
-import Login from "./Login";
-import Register from "./Register";
-import Password from "./Password";
-
 import { useState } from "react";
-import { Container, Row, Stack, Card } from "react-bootstrap";
+import { Container, Stack, Card } from "react-bootstrap";
 import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
 import RangoNumerico from "./RangoNumerico";
@@ -74,7 +69,7 @@ function HomeCard() {
         return (
           <>
             <Container id="input">
-              <BackButton action= "home" />
+              <BackButton action="home" />
               <br></br>
               <br></br>
               <Stack gap={0} className=" ">
