@@ -5,18 +5,16 @@ function RangeExample({
   text = "text",
   type = "secondary",
   disabled = false,
-  id = ""
+  id = "",
 }) {
-  const [data, setData] = useState()
-  ;
+  const [data, setData] = useState();
   return (
     <>
-     
-        <Form.Label className="row">
-          <Col className="col-10 pb-4">{text}</Col>
-          <Col className="col-2 text-end fs-4 fw-bold ">{data}</Col>
-        </Form.Label>
-      
+      <Form.Label className="row">
+        <Col className="col-10 pb-4">{text}</Col>
+        <Col className="col-2 text-end fs-4 fw-bold ">{data}</Col>
+      </Form.Label>
+
       <Form.Range
         className="mb-5"
         min={0}

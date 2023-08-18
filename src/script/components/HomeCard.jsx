@@ -74,7 +74,7 @@ function HomeCard() {
         return (
           <>
             <Container id="input">
-              <BackButton action= "home" />
+              <BackButton action="home" />
               <br></br>
               <br></br>
               <Stack gap={0} className=" ">
@@ -96,7 +96,7 @@ function HomeCard() {
                   text="¿Cuán fatigado estás?"
                   id="fatiga"
                   onChange={(value) =>
-                    setSliderValues({ ...sliderValues, fatiga: value })
+                    setSliderValues({ ...sliderValues, fatiga: { value } })
                   }
                 />
                 <RangoNumerico
