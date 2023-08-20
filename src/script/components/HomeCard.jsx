@@ -130,7 +130,6 @@ function HomeCard() {
           <>
             <Container id="input">
               <BackButton action="home" />
-
               <Stack className="mt-2" gap={0}>
                 <SliderRange
                   text="¿Cómo dormiste anoche?"
