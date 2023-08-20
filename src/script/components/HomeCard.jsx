@@ -1,17 +1,75 @@
-import { useState } from "react";
-import { Container, Stack, Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Stack, Card, Form, Modal, Button, Image } from "react-bootstrap";
 import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
-import RangoNumerico from "./RangoNumerico";
+import SliderRange from "./SliderRange";
+import musculos from "../../img/musculos.png";
 
 function HomeCard() {
   const [currentState, setCurrentState] = useState("home");
   const [sliderValues, setSliderValues] = useState({
-    sueño: null,
-    dolor: null,
-    fatiga: null,
-    estres: null,
+    sleep: "",
+    dolor: "",
+    fatiga: "",
+    estres: "",
+    sobrecarga: false,
+    zona: "",
   });
+
+  const [sliderTrain, setSliderTrain] = useState({
+    intensidad: undefined,
+  });
+
+  const [show, setShow] = useState(false);
+
+  function Popup() {
+    return (
+      <Modal
+        show={show}
+        size="lg"
+        onHide={() => setShow(false)}
+        backdrop="static"
+        keyboard={false}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>¿Dónde sentís la sobrecarga?</Modal.Title>
+        </Modal.Header>
+        <Modal.Body
+        className="d-flex justify-content-center align-items-center">
+        <Image src={musculos} alt="Musculos" className="img-fluid col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xxl-8" />
+        </Modal.Body>
+        <Modal.Footer>
+       <p>musculos seleccionados</p>
+          <Button variant="primary" className="text-white" onClick={() => setShow(false)}>
+            Aplicar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+
+  function handleSobrecargaChange() {
+    setSliderValues((prevValues) => ({
+      ...prevValues,
+      sobrecarga: !prevValues.sobrecarga,
+    }));
+  }
+
+  function handleSliderChange(key, value) {
+    setSliderValues((prevValues) => ({
+      ...prevValues,
+      [key]: value,
+    }));
+  }
+
+  function handleSliderTrainChange(key, value) {
+    setSliderTrain((prevValues) => ({
+      ...prevValues,
+      [key]: value,
+    }));
+  }
 
   function RenderContent() {
     switch (currentState) {
@@ -43,7 +101,9 @@ function HomeCard() {
       case "wellness": {
         return (
           <>
-            <Container id="input"></Container>
+            <Container id="input">
+              <BackButton action="home" />
+            </Container>
             <Container id="action" className="mt-auto p-0">
               <Stack gap={2} className=" ">
                 <CtaButton
@@ -70,37 +130,43 @@ function HomeCard() {
           <>
             <Container id="input">
               <BackButton action="home" />
-              <br></br>
-              <br></br>
-              <Stack gap={0} className=" ">
-                <RangoNumerico
+              <Stack className="mt-2" gap={0}>
+                <SliderRange
                   text="¿Cómo dormiste anoche?"
-                  id="sueño"
-                  onChange={(value) =>
-                    setSliderValues({ ...sliderValues, sueño: value })
-                  }
+                  clave="sleep"
+                  objeto={sliderValues}
+                  handleSliderChange={handleSliderChange}
                 />
-                <RangoNumerico
+                <SliderRange
                   text="¿Cuánto te duelen los músculos?"
-                  id="dolor"
-                  onChange={(value) =>
-                    setSliderValues({ ...sliderValues, dolor: value })
-                  }
+                  clave="dolor"
+                  objeto={sliderValues}
+                  handleSliderChange={handleSliderChange}
                 />
-                <RangoNumerico
+                <SliderRange
                   text="¿Cuán fatigado estás?"
-                  id="fatiga"
-                  onChange={(value) =>
-                    setSliderValues({ ...sliderValues, fatiga: value })
-                  }
+                  clave="fatiga"
+                  objeto={sliderValues}
+                  handleSliderChange={handleSliderChange}
                 />
-                <RangoNumerico
+                <SliderRange
                   text="¿Cuán estresado estás?"
-                  id="estres"
-                  onChange={(value) =>
-                    setSliderValues({ ...sliderValues, estres: value })
+                  clave="estres"
+                  objeto={sliderValues}
+                  handleSliderChange={handleSliderChange}
+                />
+                <Form.Check
+                  type="switch"
+                  id="custom-switch"
+                  label="¿sentís sobrecarga muscular?"
+                  value={""}
+                  checked={sliderValues.sobrecarga}
+                  onChange={handleSobrecargaChange}
+                  onClick={() =>
+                    !sliderValues.sobrecarga ? setShow(true) : setShow(false)
                   }
                 />
+                <Popup />
               </Stack>
             </Container>
             <Container id="action" className="mt-auto p-0">
@@ -110,35 +176,36 @@ function HomeCard() {
                   navigate="home"
                   type="primary"
                   disabled={
-                    sliderValues.sueño === null ||
-                    sliderValues.dolor === null ||
-                    sliderValues.fatiga === null ||
-                    sliderValues.estres === null
+                    sliderValues.sleep === "" ||
+                    sliderValues.dolor === "" ||
+                    sliderValues.fatiga === "" ||
+                    sliderValues.estres === ""
                   }
                   action={handleOnClick}
                 />
               </Stack>
             </Container>
-            {console.log(sliderValues)}
           </>
         );
       }
       case "entrenamiento": {
         return (
           <>
-            <Container id="input"></Container>
+            <Container id="input">
+              <BackButton action="home" />
+            </Container>
             <Container id="action" className="mt-auto p-0">
               <Stack gap={2} className=" ">
                 <CtaButton
                   text="2 de Mayo"
-                  navigate="day"
+                  navigate="trainingDay"
                   type="primary"
                   disabled={false}
                   action={handleOnClick}
                 />
                 <CtaButton
                   text="1 de Mayo"
-                  navigate="day"
+                  navigate="trainingDay"
                   type="secondary"
                   disabled={false}
                   action={handleOnClick}
@@ -148,8 +215,38 @@ function HomeCard() {
           </>
         );
       }
+      case "trainingDay": {
+        return (
+          <>
+            <Container id="input">
+              <BackButton action="home" />
+              <br></br>
+              <br></br>
+              <Stack gap={0}>
+                <SliderRange
+                  text="¿Cuán intensa sentiste la sesión?"
+                  clave="intensidad"
+                  objeto={sliderTrain}
+                  handleSliderChange={handleSliderTrainChange}
+                />
+              </Stack>
+            </Container>
+            <Container id="action" className="mt-auto p-0">
+              <Stack gap={2} className=" ">
+                <CtaButton
+                  text="Enviar"
+                  navigate="home"
+                  type="primary"
+                  disabled={sliderTrain.intensidad === undefined}
+                  action={handleOnClick}
+                />
+              </Stack>
+            </Container>
+          </>
+        );
+      }
       default: {
-        setCurrentState("home");
+        setCurrentState();
       }
     }
   }

@@ -10,7 +10,7 @@ function BackButton({ action }) {
     
     <IoChevronBackCircleOutline
       cursor={mouseEntered ? "pointer" : "default"}
-      size="80"
+      size="50"
       color="lightgrey"
       opacity={mouseEntered ? "50%" : "100%"}
       onClick={() => action("home")}
