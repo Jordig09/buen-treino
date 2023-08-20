@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Container, Stack, Card, Form, Modal, Button } from "react-bootstrap";
+import { Container, Stack, Card, Form, Modal, Button, Image } from "react-bootstrap";
 import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
 import SliderRange from "./SliderRange";
+import musculos from "../../img/musculos.png";
 
 function HomeCard() {
   const [currentState, setCurrentState] = useState("home");
@@ -14,10 +15,40 @@ function HomeCard() {
     sobrecarga: false,
     zona: "",
   });
+
   const [sliderTrain, setSliderTrain] = useState({
     intensidad: undefined,
   });
-  const [modalShow, setModalShow] = React.useState(false);
+
+  const [show, setShow] = useState(false);
+
+  function Popup() {
+    return (
+      <Modal
+        show={show}
+        size="lg"
+        onHide={() => setShow(false)}
+        backdrop="static"
+        keyboard={false}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>¿Dónde sentís la sobrecarga?</Modal.Title>
+        </Modal.Header>
+        <Modal.Body
+        className="d-flex justify-content-center align-items-center">
+        <Image src={musculos} alt="Musculos" className="img-fluid col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xxl-8" />
+        </Modal.Body>
+        <Modal.Footer>
+       <p>musculos seleccionados</p>
+          <Button variant="primary" className="text-white" onClick={() => setShow(false)}>
+            Aplicar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
 
   function handleSobrecargaChange() {
     setSliderValues((prevValues) => ({
@@ -129,14 +160,14 @@ function HomeCard() {
                   type="switch"
                   id="custom-switch"
                   label="¿sentís sobrecarga muscular?"
+                  value={""}
                   checked={sliderValues.sobrecarga}
                   onChange={handleSobrecargaChange}
-                  onClick={() => sliderValues.sobrecarga ? setModalShow(false) : setModalShow(true)}
+                  onClick={() =>
+                    !sliderValues.sobrecarga ? setShow(true) : setShow(false)
+                  }
                 />
-                <MyVerticallyCenteredModal
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                />
+                <Popup />
               </Stack>
             </Container>
             <Container id="action" className="mt-auto p-0">
@@ -238,33 +269,6 @@ function HomeCard() {
       </Card.Body>
     </Card>
   );
-  function MyVerticallyCenteredModal(props) {
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    );
-  }
 }
 
 export default HomeCard;
