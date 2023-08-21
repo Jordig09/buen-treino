@@ -7,7 +7,10 @@ import CtaButton from "./CtaButton";
 import * as yup from "yup";
 import { Formik } from "formik";
 
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+} from "firebase/auth";
 import { auth } from "../../api/firebase";
 
 function Register({ action }) {
@@ -46,24 +49,26 @@ function Register({ action }) {
             password: "",
             confirmPassword: "",
           }}
-          onSubmit={(values) => {
-            const formElement = document.querySelector(".register-form");
-            const formData = new FormData(formElement);
-            createUserWithEmailAndPassword(auth, values.email, values.password)
-              .then(() => {
-                formData.append("id", auth.currentUser.uid);
-                formData.append("sheet", "USUARIO");
-                fetch(
-                  "https://script.google.com/macros/s/AKfycbxpkciTJUmwwUlqCzudHt4qrd8kqH71L6VV4o746ofZ_elWahsU8tEaN5PTdpJy50bN/exec",
-                  { method: "POST", body: formData }
-                );
-              })
-              .then(() => {
-                navigate("/");
-              })
-              .catch((error) => {
-                console.log(error);
-              });
+          onSubmit={async (values) => {
+            try {
+              const formElement = document.querySelector(".register-form");
+              const formData = new FormData(formElement);
+              const userCredential = await createUserWithEmailAndPassword(
+                auth,
+                values.email,
+                values.password
+              );
+              await sendEmailVerification(userCredential.user);
+              formData.append("id", auth.currentUser.uid);
+              formData.append("sheet", "USUARIO");
+              fetch(
+                "https://script.google.com/macros/s/AKfycbxpkciTJUmwwUlqCzudHt4qrd8kqH71L6VV4o746ofZ_elWahsU8tEaN5PTdpJy50bN/exec",
+                { method: "POST", body: formData }
+              );
+              navigate("/");
+            } catch (e) {
+              console.log(e);
+            }
           }}
         >
           {({ handleChange, handleSubmit, touched, errors, values }) => (

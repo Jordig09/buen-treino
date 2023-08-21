@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Container, Row, Stack, Card } from "react-bootstrap";
+import { Container, Stack, Card } from "react-bootstrap";
 import CtaButton from "./CtaButton";
 import Login from "./Login";
 import BackButton from "./BackButton";
@@ -38,36 +37,7 @@ function LoginCard() {
         );
       }
       case "login": {
-        return (
-          <>
-            <Container id="input">
-              <BackButton action={handleOnClick} />
-              <Login />
-              <Row className="">
-                <Link
-                  style={{
-                    textAlign: "right",
-                  }}
-                  className="link-secondary link-underline-opacity-0 link-underline-opacity-100-hover"
-                  onClick={() => setCurrentState("password")}
-                >
-                  Olvidé la contraseña
-                </Link>
-              </Row>
-            </Container>
-            <Container id="action" className="mt-auto p-0">
-              <Stack gap={2} className=" ">
-                <CtaButton
-                  text="entrar"
-                  navigate="home"
-                  type="primary"
-                  disabled={false}
-                  action={handleOnClick}
-                />
-              </Stack>
-            </Container>
-          </>
-        );
+        return <Login action={handleOnClick} />;
       }
 
       case "register": {
