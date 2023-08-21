@@ -20,6 +20,7 @@ function CtaButton({
               border: "0",
               backgroundColor: "rgb(60,253,155)",
               color: "white",
+              fontFamily: 'Open Sans, sans-serif'
             }
           : {
               fontSize: "20px",
@@ -27,6 +28,7 @@ function CtaButton({
               border: "3px solid grey",
               backgroundColor: "white",
               color: "rgb(60,253,155)",
+              fontFamily: 'Nunito Sans, sans-serif'
             }
       }
       disabled={disabled}

@@ -5,6 +5,7 @@ function Footer() {
     <Container
       fluid
       className="mt-auto bg-dark font-small text-center text-white "
+      style={{fontFamily: 'Quicksand, sans-serif'}}
     >
       <div className="footer-copyright text-center py-3">
         © 2023 Copyright: G bro

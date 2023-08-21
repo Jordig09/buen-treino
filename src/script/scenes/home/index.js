@@ -9,7 +9,7 @@ function Home() {
       <NavBar login={true} />
       <Container className="my-4">
         <Row className="justify-content-end">
-          <Col sm md="4" className="">
+          <Col sm md="6" lg="5" className="">
             <HomeCard />
           </Col>
         </Row>

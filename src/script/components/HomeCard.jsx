@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Container, Stack, Card, Form, Modal, Button, Image } from "react-bootstrap";
+import { Container, Stack, Card, Form, Modal, Button } from "react-bootstrap";
 import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
 import SliderRange from "./SliderRange";
-import musculos from "../../img/musculos.png";
+
+import ImgMusculos from "./ImgMusculos";
 
 function HomeCard() {
   const [currentState, setCurrentState] = useState("home");
@@ -34,15 +35,18 @@ function HomeCard() {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title>¿Dónde sentís la sobrecarga?</Modal.Title>
+          <Modal.Title style={{fontFamily: 'Nunito Sans, sans-serif', fontWeight: '700'}}>¿Dónde sentís la sobrecarga?</Modal.Title>
         </Modal.Header>
-        <Modal.Body
-        className="d-flex justify-content-center align-items-center">
-        <Image src={musculos} alt="Musculos" className="img-fluid col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xxl-8" />
+        <Modal.Body className="d-flex justify-content-center align-items-center">
+          <ImgMusculos />
         </Modal.Body>
         <Modal.Footer>
-       <p>musculos seleccionados</p>
-          <Button variant="primary" className="text-white" onClick={() => setShow(false)}>
+          <p>musculos seleccionados</p>
+          <Button
+            variant="primary"
+            className="text-white"
+            onClick={() => setShow(false)}
+          >
             Aplicar
           </Button>
         </Modal.Footer>
@@ -156,6 +160,7 @@ function HomeCard() {
                   handleSliderChange={handleSliderChange}
                 />
                 <Form.Check
+                  style={{fontFamily: 'Nunito Sans, sans-serif'}}
                   type="switch"
                   id="custom-switch"
                   label="¿sentís sobrecarga muscular?"
@@ -166,6 +171,8 @@ function HomeCard() {
                     !sliderValues.sobrecarga ? setShow(true) : setShow(false)
                   }
                 />
+                <br />
+
                 <Popup />
               </Stack>
             </Container>
