@@ -9,7 +9,7 @@ function SliderRange({ text, clave, objeto, handleSliderChange }) {
       </Form.Label>
       <Form.Range
         className="mb-4"
-        min={0}
+        min={0  }
         max={10}
         step={1}
         label={{ clave }}

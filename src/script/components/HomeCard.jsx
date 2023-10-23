@@ -4,6 +4,7 @@ import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
 import SliderRange from "./SliderRange";
 
+import ImgMusculoFrenteSel from "./ImgMusculoFrenteSel";
 import ImgMusculos from "./ImgMusculos";
 
 function HomeCard() {
@@ -35,10 +36,15 @@ function HomeCard() {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title style={{fontFamily: 'Nunito Sans, sans-serif', fontWeight: '700'}}>¿Dónde sentís la sobrecarga?</Modal.Title>
+          <Modal.Title
+            style={{ fontFamily: "Nunito Sans, sans-serif", fontWeight: "700" }}
+          >
+            ¿Dónde sentís la sobrecarga?
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body className="d-flex justify-content-center align-items-center">
-          <ImgMusculos />
+          {/* <ImgMusculos /> */}
+          <ImgMusculoFrenteSel />
         </Modal.Body>
         <Modal.Footer>
           <p>musculos seleccionados</p>
@@ -160,7 +166,7 @@ function HomeCard() {
                   handleSliderChange={handleSliderChange}
                 />
                 <Form.Check
-                  style={{fontFamily: 'Nunito Sans, sans-serif'}}
+                  style={{ fontFamily: "Nunito Sans, sans-serif" }}
                   type="switch"
                   id="custom-switch"
                   label="¿sentís sobrecarga muscular?"

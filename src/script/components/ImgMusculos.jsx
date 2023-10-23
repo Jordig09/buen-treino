@@ -1,8 +1,8 @@
 import { Image } from "react-bootstrap";
 import React from "react";
 
-import espalda from "../../img/espalda_650px.png";
-import frente from "../../img/frente_650px.png";
+import espalda from "../../img/musculos/espalda_650px.png";
+import frente from "../../img/musculos/frente_650px.png";
 
 function ImgMusculos() {
   return (
