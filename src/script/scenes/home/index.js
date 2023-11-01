@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "../../components/NavBar";
-import HomeCard from "../../components/HomeCard";
+import Route from "../../components/Route";
 import Footer from "../../components/Footer";
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
       <Container className="my-4">
         <Row className="justify-content-end">
           <Col sm md="6" lg="5" className="">
-            <HomeCard />
+            <Route />
           </Col>
         </Row>
       </Container>

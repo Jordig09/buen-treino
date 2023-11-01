@@ -36,6 +36,18 @@ code {
     monospace;
 }
 
+.image-container {
+  position: relative;
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  height: 650px; /* Ajusta el alto según tus necesidades */
+}
+
+#imagen0, #imagen1, #imagen2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 
 // import bootstrap styles at the bottom!

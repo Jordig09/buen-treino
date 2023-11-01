@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Stack, Card } from "react-bootstrap";
 import CtaButton from "./CtaButton";
@@ -9,6 +9,10 @@ import Password from "./Password";
 
 function LoginCard() {
   const [currentState, setCurrentState] = useState("home");
+  
+  const handleOnClick = (text) => {
+    setCurrentState(text);
+  };
 
   function RenderContent() {
     switch (currentState) {
@@ -19,7 +23,7 @@ function LoginCard() {
             <Container id="action" className="mt-auto p-0">
               <Stack gap={2} className=" ">
                 <CtaButton
-                  text="entrar"
+                  text="home"
                   navigate="login"
                   type="primary"
                   disabled={false}
@@ -99,10 +103,6 @@ function LoginCard() {
       }
     }
   }
-
-  const handleOnClick = (text) => {
-    setCurrentState(text);
-  };
 
   return (
     <Card
