@@ -26,7 +26,7 @@ function Route() {
   });
 
   const [sliderTrain, setSliderTrain] = useState({
-    intensidad: undefined,
+    intensidad: "",
   });
 
   function handleSliderTrainChange(key, value) {

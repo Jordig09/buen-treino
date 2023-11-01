@@ -8,7 +8,7 @@ function TrainingDay({ handleOnClick , handleSliderTrainChange , sliderTrain}) {
   return (
     <>
       <Container id="input">
-        <BackButton text="home" />
+        <BackButton action={ handleOnClick } />
         <br></br>
         <br></br>
         <Stack gap={0}>

@@ -1,8 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+import pointInPolygon from "point-in-polygon";
 
-const Polygon = ({ points, pic }) => {
+const Polygon = ({ points, pic, onMouseMove }) => {
   const canvasRef = useRef(null);
   const [show, setShow] = useState("none");
+  const isMouseInside = pointInPolygon(
+    [onMouseMove.x, onMouseMove.y],
+    points.map((point) => [point.x, point.y])
+  );
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -21,43 +26,41 @@ const Polygon = ({ points, pic }) => {
     context.stroke();
   }, [points]);
 
-  
-    const [showImage, setShowImage] = useState(false);
-  
-    const handleMouseEnter = () => {
-      setShowImage(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setShowImage(false);
-    };
-  
+  const [showImage, setShowImage] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowImage(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowImage(false);
+  };
 
   return (
     <>
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleMouseEnter} // Puedes cambiarlo a onClick si prefieres que la imagen permanezca al hacer clic
-      style={{
-        position: "absolute",
-        cursor: "pointer",
-      }}
-    >
-      {showImage && <img src={pic} alt="Imagen Mostrada" />}
-      <svg width="100%" height="100%">
-        <polygon points={points} fill="transparent" stroke="none" />
-      </svg>
-    </div>
-
-      <canvas
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleMouseEnter} // Puedes cambiarlo a onClick si prefieres que la imagen permanezca al hacer clic
+        style={{
+          position: "absolute",
+          cursor: "pointer",
+        }}
+      >
+        {showImage && <img src={pic} alt="Imagen Mostrada" />}
+        <svg width="100%" height="100%">
+          <polygon
+            points={points.map((point) => `${point.x},${point.y}`).join(" ")}
+            fill={isMouseInside ? "blue" : "transparent"}
+          />
+        </svg>
+      </div>
+      {/* <canvas
         ref={canvasRef}
         width={250}
         height={650}
         style={{ position: "absolute" }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      />
+      /> */}
       <img src={pic} display={show} style={{ position: "absolute" }} />
     </>
   );

@@ -11,7 +11,7 @@ function Day({ handleOnClick, handleSobrecargaChange, setShow, show , handleSlid
   return (
     <>
       <Container id="input">
-        <BackButton action="home" />
+        <BackButton action={handleOnClick} />
         <Stack className="mt-2" gap={0}>
           <SliderRange
             text="¿Cómo dormiste anoche?"

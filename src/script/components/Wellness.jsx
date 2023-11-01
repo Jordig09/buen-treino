@@ -3,11 +3,11 @@ import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
 import React from "react";
 
-function Wellness({ handleOnClick, handleSobrecargaChange }) {
+function Wellness({ handleOnClick }) {
   return (
     <>
       <Container id="input">
-        <BackButton action="home" />
+        <BackButton action={handleOnClick} />
       </Container>
       <Container id="action" className="mt-auto p-0">
         <Stack gap={2} className=" ">

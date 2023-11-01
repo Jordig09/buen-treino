@@ -6,7 +6,7 @@ import BackButton from "./BackButton";
 function Train({ handleOnClick }) {
   return(<>
     <Container id="input">
-      <BackButton action="home" />
+      <BackButton action={ handleOnClick } />
     </Container>
     <Container id="action" className="mt-auto p-0">
       <Stack gap={2} className=" ">
