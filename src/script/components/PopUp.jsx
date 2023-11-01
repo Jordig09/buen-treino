@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
-import ImgMusculoFrenteSel from "./ImgMusculoFrenteSel";
+import ImgFrente from "./ImgFrente";
 
  function Popup({setShow , show}) {
     return (
@@ -21,7 +21,7 @@ import ImgMusculoFrenteSel from "./ImgMusculoFrenteSel";
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="d-flex justify-content-center align-items-center">
-          <ImgMusculoFrenteSel />
+          <ImgFrente />
         </Modal.Body>
         <Modal.Footer>
           <p>musculos seleccionados</p>

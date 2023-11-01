@@ -7,11 +7,23 @@ import Home from "./Home";
 import TrainingDay from "./TrainingDay";
 
 function Route() {
+  // -- Switch Casos --
   const [currentState, setCurrentState] = useState("home");
 
   const handleOnClick = (text) => {
     setCurrentState(text);
+    console.log(currentState);
   };
+
+  // -- Valores sliders --
+  const [sliderValues, setSliderValues] = useState({
+    sleep: "",
+    dolor: "",
+    fatiga: "",
+    estres: "",
+    sobrecarga: false,
+    zona: "",
+  });
 
   const [sliderTrain, setSliderTrain] = useState({
     intensidad: undefined,
@@ -24,11 +36,21 @@ function Route() {
     }));
   }
 
+  function handleSliderChange(key, value) {
+    setSliderValues((prevValues) => ({
+      ...prevValues,
+      [key]: value,
+    }));
+  }
+
   // -- Sobrecarga --
-  const [show, setShow] = useState();
-  const [sobrecarga, setSobrecarga] = useState();
+  const [show, setShow] = useState(false);
+
   function handleSobrecargaChange() {
-    setShow()
+    setSliderValues((prevValues) => ({
+      ...prevValues,
+      sobrecarga: !prevValues.sobrecarga,
+    }));
   }
 
   function RenderContent() {
@@ -45,6 +67,9 @@ function Route() {
             handleOnClick={handleOnClick}
             handleSobrecargaChange={handleSobrecargaChange}
             setShow={setShow}
+            show={show}
+            handleSliderChange={handleSliderChange}
+            sliderValues={sliderValues}
           />
         );
       }

@@ -5,22 +5,8 @@ import BackButton from "./BackButton";
 import SliderRange from "./SliderRange";
 import PopUp from "./PopUp";
 
-function Day({ handleOnClick, handleSobrecargaChange, setShow, show }) {
-  const [sliderValues, setSliderValues] = useState({
-    sleep: "",
-    dolor: "",
-    fatiga: "",
-    estres: "",
-    sobrecarga: false,
-    zona: "",
-  });
-
-  function handleSliderChange(key, value) {
-    setSliderValues((prevValues) => ({
-      ...prevValues,
-      [key]: value,
-    }));
-  }
+function Day({ handleOnClick, handleSobrecargaChange, setShow, show , handleSliderChange,sliderValues }) {
+  
 
   return (
     <>

@@ -4,7 +4,7 @@ import r01 from "../../img/musculos/r01.png";
 import r02 from "../../img/musculos/r02.png";
 import Polygon from "./Polygon";
 
-function ImgMusculoFrenteSel() {
+function ImgFrente() {
   // Areas poligonales
   const polygonArea1 = [
     { x: 61, y: 110 },
@@ -282,14 +282,14 @@ function ImgMusculoFrenteSel() {
         pic={r01}
         style={{ display: "block" }}
       />
-      {/* <Polygon
+      <Polygon
         points={polygonArea2}
-        img={r02}
+        pic={r02}
         style={{ display: "block" }}
-      /> */}
+      />
       <Polygon points={polygonArea2} style={{ display: "block" }} />
-      {/* <Polygon points={polygonArea2b} style={{ display: "block" }} /> */}
-      {/* <Polygon points={polygonArea3} style={{ display: "block" }} />
+       {/* <Polygon points={polygonArea2b} style={{ display: "block" }} /> 
+       <Polygon points={polygonArea3} style={{ display: "block" }} />
       <Polygon points={polygonArea3b} style={{ display: "block" }} />
       <Polygon points={polygonArea4} style={{ display: "block" }} />
       <Polygon points={polygonArea4b} style={{ display: "block" }} />
@@ -313,11 +313,11 @@ function ImgMusculoFrenteSel() {
       <Polygon points={polygonArea14} style={{ display: "block" }} />
       <Polygon points={polygonArea14b} style={{ display: "block" }} />
       <Polygon points={polygonArea15} style={{ display: "block" }} />
-      <Polygon points={polygonArea15b} style={{ display: "block" }} /> */}
+      <Polygon points={polygonArea15b} style={{ display: "block" }} />  */}
       <img src={r01} id="imagen1" alt="Imagen 1" style={{ display: "none" }} />
       <img src={r02} id="imagen2" alt="Imagen 2" style={{ display: "none" }} />
     </div>
   );
 }
 
-export default ImgMusculoFrenteSel;
+export default ImgFrente;

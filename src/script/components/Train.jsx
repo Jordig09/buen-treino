@@ -3,7 +3,7 @@ import { Container, Stack } from "react-bootstrap";
 import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
 
-function Train({ handleOnClick, handleSobrecargaChange }) {
+function Train({ handleOnClick }) {
   return(<>
     <Container id="input">
       <BackButton action="home" />
