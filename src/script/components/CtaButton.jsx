@@ -25,7 +25,7 @@ function CtaButton({
           : {
               fontSize: "20px",
               fontWeight: "700",
-              border: "3px solid grey",
+              border: "0",
               backgroundColor: "white",
               color: "rgb(60,253,155)",
               fontFamily: 'Nunito Sans, sans-serif'

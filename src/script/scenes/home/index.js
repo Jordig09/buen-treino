@@ -1,20 +1,32 @@
+import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "../../components/NavBar";
 import Route from "../../components/Route";
 import Footer from "../../components/Footer";
 
+
 function Home() {
+  const [infoVisible, setInfoVisible] = useState(false);
+
+  const toggleInfo = () => {
+    setInfoVisible(!infoVisible);
+    infoVisible ? setTutorialText("Hide") : setTutorialText("Show");
+  };
+
+  const [tutorialText, setTutorialText] = useState("Tutorial");
+
   return (
     <>
       <NavBar login={true} />
+
       <Container className="my-4">
         <Row className="justify-content-end">
           <Col sm md="6" lg="5" className="">
-            <Route />
+            <Route infoVisible={infoVisible}/>
           </Col>
         </Row>
       </Container>
-      <Footer />
+      <Footer tutorialText={tutorialText} toggleInfo={toggleInfo} />
     </>
   );
 }

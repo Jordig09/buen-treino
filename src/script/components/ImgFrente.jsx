@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import frente from "../../img/musculos/frente_650px.png";
 import r01 from "../../img/musculos/r01.png";
 import r02 from "../../img/musculos/r02.png";
@@ -6,7 +6,7 @@ import Polygon from "./Polygon";
 import pointInPolygon from "point-in-polygon";
 
 function ImgFrente() {
-  const [mouseLocation, setMouseLocation] = useState([ 0, 0 ]);
+  const [mouseLocation, setMouseLocation] = useState([0, 0]);
   const [desplazamientoX, setDesplazamientoX] = useState(0);
   const [desplazamientoY, setDesplazamientoY] = useState(0);
 
@@ -22,13 +22,13 @@ function ImgFrente() {
 
   // Manejador del evento para rastrear la ubicación del mouse
   const handleMouseMove = (e) => {
-    setMouseLocation(
-    [ e.clientX - desplazamientoX,
-       e.clientY - desplazamientoY]
-    );
+    setMouseLocation([
+      e.clientX - desplazamientoX,
+      e.clientY - desplazamientoY,
+    ]);
     // Ahora puedes usar mouseLocation para verificar si está dentro de los polígonos
-    console.log(pointInPolygon(mouseLocation, polygonArea1) ? "ahi ta" : "" );
-    };
+    console.log(pointInPolygon(mouseLocation, polygonArea1) ? "ahi ta" : "");
+  };
 
   // Areas poligonales
 
@@ -39,7 +39,7 @@ function ImgFrente() {
     [103, 82],
     [117, 122],
   ];
-  
+
   const polygonArea1b = [
     [250 - 61, 110],
     [250 - 103, 82],

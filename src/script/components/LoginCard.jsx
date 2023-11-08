@@ -9,7 +9,7 @@ import Password from "./Password";
 
 function LoginCard() {
   const [currentState, setCurrentState] = useState("home");
-  
+
   const handleOnClick = (text) => {
     setCurrentState(text);
   };
