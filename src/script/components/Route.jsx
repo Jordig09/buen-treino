@@ -5,7 +5,8 @@ import Wellness from "./Wellness";
 import Train from "./Train";
 import Home from "./Home";
 import TrainingDay from "./TrainingDay";
-import bgTrainer from "../../img/Stock/Trainer2.png";
+import bgTrainer2 from "../../img/Stock/Trainer2.png";
+
 
 function Route({infoVisible}) {
   // -- Switch Casos --
@@ -91,6 +92,11 @@ function Route({infoVisible}) {
           />
         );
       }
+      // case "unirse":{
+      //   return(
+          
+      //   )
+      // }
       default: {
         setCurrentState();
       }
@@ -99,7 +105,7 @@ function Route({infoVisible}) {
   const backgroundImageStyle =
     currentState === "day" || currentState === "trainingDay"
       ? "none"
-      : `url(${bgTrainer})`; // Establece la imagen de fondo o "none" si es day o trainingDay
+      : `url(${bgTrainer2})`; // Establece la imagen de fondo o "none" si es day o trainingDay
 
   return (
     <Card

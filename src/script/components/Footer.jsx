@@ -9,7 +9,7 @@ function Footer({ tutorialText, toggleInfo }) {
       className="mt-auto bg-dark font-small text-center text-white w-100"
       style={{ fontFamily: "Quicksand, sans-serif" }}
     >
-      <Row className="footer-copyright text-center py-2 w-100 justify-content-center align-items-center">
+      <Row className="m-0 footer-copyright text-center py-2 w-100 justify-content-center align-items-center">
         <Col xs={3} sm={3} md={2} lg={2}>
           <ToggleTutorial tutorialText={tutorialText} toggleInfo={toggleInfo} />
         </Col>

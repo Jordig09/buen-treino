@@ -1,18 +1,15 @@
 import React from "react";
 import CtaButton from "./CtaButton";
-import { Container, Stack, Image } from "react-bootstrap";
+import { Container, Stack, Image, Col, Row } from "react-bootstrap";
 import postit from "../../img/Tuto/postit.png";
+import tape1 from "../../img/Tuto/tape1.png";
+import tape2 from "../../img/Tuto/tape2.png";
 
-function Home({ handleOnClick, currentState, infoVisible}) {
-  
+function Home({ handleOnClick, currentState, infoVisible }) {
   return (
     <>
       <Container id="input"></Container>
-      <Container
-        id="action"
-        className="mt-auto p-0"
-        style={{ marginBottom: "60px" }}
-      >
+      <Container id="action" className="mt-auto p-0">
         <Stack gap={2} className=" ">
           <CtaButton
             text="wellness"
@@ -28,8 +25,28 @@ function Home({ handleOnClick, currentState, infoVisible}) {
             disabled={false}
             action={handleOnClick}
           />
+          <Row>
+            <Col xs={6}>
+              <CtaButton
+                text="unirse"
+                // navigate=""
+                type="secondary"
+                disabled={false}
+                className="font-small"
+                // action={handleOnClick}
+              />
+            </Col>
+            <Col xs={6}>
+              <CtaButton
+                text="crear"
+                // navigate=""
+                type="secondary"
+                disabled={false}
+                // action={handleOnClick}
+              />
+            </Col>
+          </Row>
         </Stack>
-
         <Image
           src={infoVisible ? postit : ""}
           className="align-item-right"
@@ -39,6 +56,25 @@ function Home({ handleOnClick, currentState, infoVisible}) {
             right: "-10px",
           }}
         />
+         <Image
+          src={infoVisible ? tape1 : ""}
+          className="align-item-left"
+          style={{
+            position: "absolute",
+            bottom: "-40px",
+            left: "-40px",
+          }}
+        />
+         <Image
+          src={infoVisible ? tape2 : ""}
+          className="align-item-right"
+          style={{
+            position: "absolute",
+            bottom: "-40px",
+            right: "0px",
+          }}
+        />
+
       </Container>
     </>
   );

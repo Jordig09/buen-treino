@@ -5,9 +5,9 @@ import { MdPerson } from "react-icons/md";
 
 function NavBar({ login = true, usuario = "Usuario" }) {
   return (
-    <Navbar className="bg-dark text-white" style={{fontFamily: 'Quicksand, sans-serif'}}>
+    <Navbar className="bg-dark text-white m-0" style={{fontFamily: 'Quicksand, sans-serif'}}>
       <Container>
-        <Navbar.Brand className=" text-white " href="/home">
+        <Navbar.Brand className="text-white " href="/home">
           <img
             alt=""
             src= {running}

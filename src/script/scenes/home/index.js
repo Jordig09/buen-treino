@@ -21,7 +21,7 @@ function Home() {
 
       <Container className="my-4">
         <Row className="justify-content-end">
-          <Col sm md="6" lg="5" className="">
+          <Col sm md={9} lg={7} xl={6} xxl={5} className="">
             <Route infoVisible={infoVisible}/>
           </Col>
         </Row>

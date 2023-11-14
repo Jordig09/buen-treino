@@ -3,9 +3,7 @@ import { Container, Stack, Card, Form, Modal, Button } from "react-bootstrap";
 import CtaButton from "./CtaButton";
 import BackButton from "./BackButton";
 import SliderRange from "./SliderRange";
-
 import ImgMusculoFrenteSel from "./ImgMusculoFrenteSel";
-import ImgMusculos from "./ImgMusculos";
 
 function HomeCard() {
   const [currentState, setCurrentState] = useState("home");
@@ -43,7 +41,6 @@ function HomeCard() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="d-flex justify-content-center align-items-center">
-          {/* <ImgMusculos /> */}
           <ImgMusculoFrenteSel />
         </Modal.Body>
         <Modal.Footer>
