@@ -5,10 +5,9 @@ import postit from "../../img/Tuto/postit.png";
 import tape1 from "../../img/Tuto/tape1.png";
 import tape2 from "../../img/Tuto/tape2.png";
 
-function Home({ handleOnClick, currentState, infoVisible }) {
+function Home({ handleOnClick, infoVisible }) {
   return (
     <>
-      <Container id="input"></Container>
       <Container id="action" className="mt-auto p-0">
         <Stack gap={2} className=" ">
           <CtaButton
@@ -29,24 +28,25 @@ function Home({ handleOnClick, currentState, infoVisible }) {
             <Col xs={6}>
               <CtaButton
                 text="unirse"
-                // navigate=""
+                navigate="unirse"
                 type="secondary"
                 disabled={false}
                 className="font-small"
-                // action={handleOnClick}
+                action={handleOnClick}
               />
             </Col>
             <Col xs={6}>
               <CtaButton
                 text="crear"
-                // navigate=""
+                navigate="crear"
                 type="secondary"
                 disabled={false}
-                // action={handleOnClick}
+                action={handleOnClick}
               />
             </Col>
           </Row>
         </Stack>
+        {/* --- Imágenes tutorial --- */}
         <Image
           src={infoVisible ? postit : ""}
           className="align-item-right"

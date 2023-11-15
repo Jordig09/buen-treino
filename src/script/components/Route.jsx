@@ -5,6 +5,7 @@ import Wellness from "./Wellness";
 import Train from "./Train";
 import Home from "./Home";
 import TrainingDay from "./TrainingDay";
+import Unirse from "./Unirse";
 import bgTrainer2 from "../../img/Stock/Trainer2.png";
 
 
@@ -54,6 +55,7 @@ function Route({infoVisible}) {
     }));
   }
 
+   // -- Switch de casos --
   function RenderContent() {
     switch (currentState) {
       case "home": {
@@ -92,11 +94,12 @@ function Route({infoVisible}) {
           />
         );
       }
-      // case "unirse":{
-      //   return(
-          
-      //   )
-      // }
+      case "unirse":{
+        return(
+          <Unirse 
+          handleOnClick={handleOnClick}/>
+        )
+      }
       default: {
         setCurrentState();
       }

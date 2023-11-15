@@ -7,8 +7,12 @@ function ToggleTutorial({ tutorialText, toggleInfo }) {
   return (
     <>
       <Form.Check
-        style={{ fontFamily: "Nunito Sans, sans-serif" }}
+        className="red-switch"  // Añade la clase de estilo
+        style={{
+          fontFamily: "Nunito Sans, sans-serif",
+        }}
         type="switch"
+
         id="switch-tutorial"
         onClick={toggleInfo}
       />

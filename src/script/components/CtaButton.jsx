@@ -22,16 +22,16 @@ function CtaButton({
               backgroundColor: "rgb(60,253,155)",
               color: "white",
               fontFamily: 'Open Sans, sans-serif',
-              boxShadow: "0px 0px 20px -2px rgb(33, 37, 41)",
+              boxShadow: "0px 0px 10px -2px rgb(33, 37, 41)",
             }
           : {
               fontSize: "20px",
               fontWeight: "700",
               border: "0",
-              backgroundColor: "white",
-              color: "rgb(60,253,155)",
+              backgroundColor: "rgb(230,230,200)",
+              color: "rgb(50,210,130)",
               fontFamily: 'Nunito Sans, sans-serif',
-              boxShadow: "0px 0px 20px -2px rgb(33, 37, 41)",
+              // boxShadow: "0px 0px 20px -2px rgb(33, 37, 41)",
             }
       }
       disabled={disabled}
