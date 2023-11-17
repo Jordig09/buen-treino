@@ -55,12 +55,12 @@ const Polygon = ({ points, pic, onMouseMove }) => {
           />
         </svg>
       </div>
-      {/* <canvas
+      <canvas
         ref={canvasRef}
         width={250}
         height={650}
         style={{ position: "absolute" }}
-      /> */}
+      />
       <img src={pic} display={show} style={{ position: "absolute" }} />
     </>
   );

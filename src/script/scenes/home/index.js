@@ -22,11 +22,11 @@ function Home() {
 
       <Container className="my-4">
         <Row className="justify-content-end d-flex">
-          <Col
-            // sm md={9} lg={7} xl={6} xxl={5}
+          {/* <Col
+            sm md={9} lg={7} xl={6} xxl={5}
             className=""
           >
-            <Card
+            <Card 
               className=" d-flex justify-content-center align-items-center"
               style={{ gap:"30px", flexDirection: "row", minHeight: "70vh", borderRadius: "15px" }}
               hidden={false}
@@ -34,8 +34,8 @@ function Home() {
               <ImgFrente />
               <ImgEspalda />
             </Card>
-          </Col>
-          <Col sm md={9} lg={7} xl={6} xxl={5} className="">
+          </Col> */}
+          <Col sm md={10} lg={8} xl={8} xxl={8} className="">
             <Route infoVisible={infoVisible} />
           </Col>
         </Row>

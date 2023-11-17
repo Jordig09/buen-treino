@@ -280,7 +280,7 @@ function ImgFrente() {
           <img
             key={`front${index +1}`}
             src={`/show/f0${index + 1}.png`}
-            alt={`Imagen ${index + 1}`}
+            alt={`Frente ${index + 1}`}
             style={{ 
               display: show ? "block" : "none",
               position: "absolute",

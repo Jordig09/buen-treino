@@ -91,6 +91,10 @@ function Route({infoVisible}) {
             handleSliderTrainChange={handleSliderTrainChange}
             sliderTrain={sliderTrain}
             handleSobrecargaChange={handleSobrecargaChange}
+            setShow={setShow}
+            show={show}
+            handleSliderChange={handleSliderChange}
+            sliderValues={sliderValues}
           />
         );
       }

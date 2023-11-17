@@ -20,15 +20,14 @@ function ImgFrente() {
     [117, 122],
   ];
 
-  
-
   const polygonArea2 = [
     [38.5, 171],
     [30, 152],
     [40, 120],
     [74, 120],
     [62, 153],
-  ]; const polygonArea3 = [
+  ];
+  const polygonArea3 = [
     [62, 157],
     [69, 166],
     [57, 223],
@@ -42,7 +41,8 @@ function ImgFrente() {
     [40, 312],
     [17, 278],
     [17, 229],
-  ];const polygonArea5 = [
+  ];
+  const polygonArea5 = [
     [65, 150],
     [76, 131],
     [105, 123],
@@ -96,7 +96,8 @@ function ImgFrente() {
     [80, 300],
     [80, 286],
     [74, 278.5],
-  ];const polygonArea11 = [
+  ];
+  const polygonArea11 = [
     [92.5, 297],
     [92.5, 285],
     [113.5, 321],
@@ -124,14 +125,16 @@ function ImgFrente() {
     [92.7, 443],
     [85, 432.5],
     [82, 419.5],
-  ];const polygonArea14 = [
+  ];
+  const polygonArea14 = [
     [63.5, 464.5],
     [71.5, 478.5],
     [71.5, 555.5],
     [60, 575.5],
     [58.3, 546],
     [52.25, 500],
-  ];const polygonArea15 = [
+  ];
+  const polygonArea15 = [
     [102.5, 466],
     [108.5, 497.25],
     [104, 513.5],
@@ -155,7 +158,6 @@ function ImgFrente() {
     [250 - 62, 153],
   ];
 
- 
   const polygonArea3b = [
     [250 - 62, 157],
     [250 - 69, 166],
@@ -165,7 +167,6 @@ function ImgFrente() {
     [250 - 38, 175],
   ];
 
-  
   const polygonArea4b = [
     [250 - 27, 214],
     [250 - 50, 257],
@@ -174,7 +175,6 @@ function ImgFrente() {
     [250 - 17, 229],
   ];
 
-  
   const polygonArea5b = [
     [250 - 65, 150],
     [250 - 76, 131],
@@ -185,7 +185,6 @@ function ImgFrente() {
     [250 - 73, 168],
   ];
 
-  
   const polygonArea6b = [
     [250 - 73, 180],
     [250 - 95, 180],
@@ -193,7 +192,6 @@ function ImgFrente() {
     [250 - 81, 241],
   ];
 
-  
   const polygonArea8b = [
     [250 - 95.5, 270],
     [250 - 90, 283],
@@ -203,7 +201,6 @@ function ImgFrente() {
     [250 - 93.5, 256.5],
   ];
 
- 
   const polygonArea9b = [
     [250 - 66, 328],
     [250 - 72, 280],
@@ -211,7 +208,7 @@ function ImgFrente() {
     [250 - 76.5, 315],
     [250 - 72, 325],
   ];
-  
+
   const polygonArea10b = [
     [250 - 76, 273],
     [250 - 89.4, 284],
@@ -229,7 +226,6 @@ function ImgFrente() {
     [250 - 74, 278.5],
   ];
 
-  
   const polygonArea11b = [
     [250 - 92.5, 297],
     [250 - 92.5, 285],
@@ -239,7 +235,7 @@ function ImgFrente() {
     [250 - 115, 387.5],
     [250 - 104.5, 350],
   ];
-  
+
   const polygonArea12b = [
     [250 - 62, 350],
     [250 - 69.5, 386.5],
@@ -251,7 +247,6 @@ function ImgFrente() {
     [250 - 56, 389.5],
   ];
 
-  
   const polygonArea13b = [
     [250 - 102, 365.5],
     [250 - 110.5, 393.3],
@@ -263,7 +258,6 @@ function ImgFrente() {
     [250 - 82, 419.5],
   ];
 
-  
   const polygonArea14b = [
     [250 - 63.5, 464.5],
     [250 - 71.5, 478.5],
@@ -273,7 +267,6 @@ function ImgFrente() {
     [250 - 52.25, 500],
   ];
 
-  
   const polygonArea15b = [
     [250 - 102.5, 466],
     [250 - 108.5, 497.25],
@@ -312,7 +305,6 @@ function ImgFrente() {
 
   const [show1, setShow1] = useState(false);
 
-
   return (
     <>
       <div className="image-container" onClick={handleOnClick}>
@@ -323,7 +315,6 @@ function ImgFrente() {
           alt="Imagen 1"
           style={{ display: show1 ? "block" : "none" }}
         />
-        
       </div>
     </>
   );
