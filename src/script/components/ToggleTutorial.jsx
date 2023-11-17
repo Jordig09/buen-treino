@@ -12,9 +12,10 @@ function ToggleTutorial({ tutorialText, toggleInfo }) {
           fontFamily: "Nunito Sans, sans-serif",
         }}
         type="switch"
-
+        
         id="switch-tutorial"
         onClick={toggleInfo}
+        
       />
       <p className="p-0 m-0">{buttonText}</p>
     </>

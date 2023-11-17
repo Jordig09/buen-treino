@@ -58,7 +58,7 @@ function Login() {
           </Col>
         </Row>
       </Container>
-      <Footer />
+      <Footer visibility="invisible"/>
     </>
   );
 }

@@ -3,11 +3,9 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import NavBar from "../../components/NavBar";
 import Route from "../../components/Route";
 import Footer from "../../components/Footer";
-import ImgFrente from "../../components/ImgFrente";
-import ImgEspalda from "../../components/ImgEspalda";
 
 function Home() {
-  const [infoVisible, setInfoVisible] = useState(true);
+  const [infoVisible, setInfoVisible] = useState(false);
 
   const toggleInfo = () => {
     setInfoVisible(!infoVisible);
@@ -35,12 +33,12 @@ function Home() {
               <ImgEspalda />
             </Card>
           </Col> */}
-          <Col sm md={10} lg={8} xl={8} xxl={8} className="">
+          <Col sm md={10} lg={8} xl={8} xxl={5} className="">
             <Route infoVisible={infoVisible} />
           </Col>
         </Row>
       </Container>
-      <Footer tutorialText={tutorialText} toggleInfo={toggleInfo} />
+      <Footer tutorialText={tutorialText} toggleInfo={toggleInfo} visibility="visible"/>
     </>
   );
 }
