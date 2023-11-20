@@ -11,6 +11,7 @@ function CtaButton({
   return (
     <Button
       variant={type}
+      className="w-100"
       onClick={() => (navigate ? action(navigate) : action())}
       style={
         type === "primary"
@@ -20,13 +21,17 @@ function CtaButton({
               border: "0",
               backgroundColor: "rgb(60,253,155)",
               color: "white",
+              fontFamily: 'Open Sans, sans-serif',
+              boxShadow: "0px 0px 10px -2px rgb(33, 37, 41)",
             }
           : {
               fontSize: "20px",
               fontWeight: "700",
-              border: "3px solid grey",
-              backgroundColor: "white",
-              color: "rgb(60,253,155)",
+              border: "0",
+              backgroundColor: "rgb(230,230,200)",
+              color: "rgb(50,210,130)",
+              fontFamily: 'Nunito Sans, sans-serif',
+              // boxShadow: "0px 0px 20px -2px rgb(33, 37, 41)",
             }
       }
       disabled={disabled}

@@ -1,6 +1,7 @@
 // overwrite theme variables
 
 // test theme
+
 $primary: #3cfd9b;
 $secondary: #1d9b5c;
 $dark: #181818;
@@ -9,6 +10,7 @@ $success: #0fa;
 $info: #555;
 $warning: #ff0;
 $danger: #f00;
+
 
 .btn {
   font-size: 20px !important;
@@ -25,7 +27,7 @@ body,
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif, "Open Sans", sans-serif;
+    sans-serif, "Open Sans", "Quicksand", "sans-serif" ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,6 +36,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.image-container {
+  position: relative;
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  height: 650px; /* Ajusta el alto según tus necesidades */
+}
+
+#imagen0, #imagen1, #imagen2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
 
 // import bootstrap styles at the bottom!
 @import "~bootstrap/scss/bootstrap.scss";

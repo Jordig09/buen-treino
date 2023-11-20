@@ -1,15 +1,19 @@
 import { Container, Navbar, NavDropdown } from "react-bootstrap";
 import PropTypes from "prop-types";
-import running from "../../img/running.png"
+import running from "../../img/running.png";
+import { MdPerson } from "react-icons/md";
 
 function NavBar({ login = true, usuario = "Usuario" }) {
   return (
-    <Navbar className="bg-dark text-white">
+    <Navbar
+      className="bg-dark text-white m-0"
+      style={{ fontFamily: "Quicksand, sans-serif" }}
+    >
       <Container>
-        <Navbar.Brand className=" text-white " href="/home">
+        <Navbar.Brand className="text-white ">
           <img
             alt=""
-            src= {running}
+            src={running}
             width="30px"
             height=""
             className="d-inline-block align-center"
@@ -21,13 +25,7 @@ function NavBar({ login = true, usuario = "Usuario" }) {
             <NavDropdown
               title={
                 <Navbar.Text>
-                  <img
-                    alt=""
-                    src="https://dummyimage.com/40/ffffff/000000.png&text=User"
-                    width=""
-                    height=""
-                    className="d-inline-block align-center"
-                  />{" "}
+                  <MdPerson color="white" size={35} />
                   <span className="text-white"> {usuario} </span>
                 </Navbar.Text>
               }
@@ -42,7 +40,7 @@ function NavBar({ login = true, usuario = "Usuario" }) {
             </NavDropdown>
           </Navbar.Collapse>
         ) : (
-          ""
+          <a  className="text-start small" href="/home">ingreso demo</a>
         )}
       </Container>
     </Navbar>
