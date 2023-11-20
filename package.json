@@ -1,6 +1,6 @@
 {
-  "name": "fitapp",
-  "version": "0.1.0",
+  "name": "buen-treino",
+  "version": "0.5.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -24,6 +24,8 @@
     "yup": "^1.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

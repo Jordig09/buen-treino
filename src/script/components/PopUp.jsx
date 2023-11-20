@@ -9,7 +9,7 @@ function Popup({ setShow, show }) {
       show={show}
       size="lg"
       onHide={() => setShow(false)}
-      className="w-100 "
+      className="w-100 p-0 "
       backdrop="static"
       keyboard={false}
       aria-labelledby="contained-modal-title-vcenter"
