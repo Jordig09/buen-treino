@@ -40,7 +40,7 @@ function NavBar({ login = true, usuario = "Usuario" }) {
             </NavDropdown>
           </Navbar.Collapse>
         ) : (
-          <a  className="ml-2 text-start small" href="/home">ingreso test</a>
+          <a  className="text-start small" href="/home">ingreso demo</a>
         )}
       </Container>
     </Navbar>

@@ -7,9 +7,9 @@ import Home from "./Home";
 import TrainingDay from "./TrainingDay";
 import Unirse from "./Unirse";
 import bgTrainer2 from "../../img/Stock/Trainer2.png";
+import Crear from "./Crear";
 
-
-function Route({infoVisible}) {
+function Route({ infoVisible }) {
   // -- Switch Casos --
   const [currentState, setCurrentState] = useState("home");
 
@@ -55,14 +55,16 @@ function Route({infoVisible}) {
     }));
   }
 
-   // -- Switch de casos --
+  // -- Switch de casos --
   function RenderContent() {
     switch (currentState) {
       case "home": {
-        return <Home handleOnClick={handleOnClick} infoVisible={infoVisible}/>;
+        return <Home handleOnClick={handleOnClick} infoVisible={infoVisible} />;
       }
       case "wellness": {
-        return <Wellness handleOnClick={handleOnClick} />;
+        return (
+          <Wellness handleOnClick={handleOnClick} infoVisible={infoVisible} />
+        );
       }
       case "day": {
         return (
@@ -79,6 +81,7 @@ function Route({infoVisible}) {
       case "entrenamiento": {
         return (
           <Train
+            infoVisible={infoVisible}
             handleOnClick={handleOnClick}
             handleSobrecargaChange={handleSobrecargaChange}
           />
@@ -98,11 +101,11 @@ function Route({infoVisible}) {
           />
         );
       }
-      case "unirse":{
-        return(
-          <Unirse 
-          handleOnClick={handleOnClick}/>
-        )
+      case "unirse": {
+        return <Unirse handleOnClick={handleOnClick} />;
+      }
+      case "crear": {
+        return <Crear handleOnClick={handleOnClick} />;
       }
       default: {
         setCurrentState();
@@ -110,9 +113,11 @@ function Route({infoVisible}) {
     }
   }
   const backgroundImageStyle =
-    currentState === "day" || currentState === "trainingDay"
-      ? "none"
-      : `url(${bgTrainer2})`; // Establece la imagen de fondo o "none" si es day o trainingDay
+    currentState === "home" ||
+    currentState === "wellness" ||
+    currentState === "entrenamiento"
+      ? `url(${bgTrainer2})` // Establece la imagen de fondo o "none" si es day o trainingDay
+      : "none";
 
   return (
     <Card
@@ -129,7 +134,7 @@ function Route({infoVisible}) {
     >
       <Card.Body className="d-flex flex-column justify-content-between">
         {RenderContent()}
-      </Card.Body >
+      </Card.Body>
     </Card>
   );
 }

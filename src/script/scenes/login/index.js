@@ -21,7 +21,7 @@ function Login() {
             width: sideLogBg,
             borderRadius: " 15px 0px 0px 15px ",
             position: "absolute",
-            backgroundColor: "rgb(50 50 50)",
+            backgroundColor: "#B2C153",
             backgroundImage: `url(${gradientbg})`,
             backgroundSize: "cover",
             backgroundPosition: "right top ",
