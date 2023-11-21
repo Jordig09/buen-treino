@@ -6,9 +6,9 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/buen-treino" element={<Login />} />
-        <Route path="/buen-treino/home" element={<Home />} />
-        <Route path="/buen-treino/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </HashRouter>
   );
