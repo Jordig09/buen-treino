@@ -36,11 +36,13 @@ function NavBar({ login = true, usuario = "Usuario" }) {
               <NavDropdown.Item href="#action/2">Calendario</NavDropdown.Item>
               <NavDropdown.Item href="#action/3">Grupos</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/login">Cerrar Sesión</NavDropdown.Item>
+              <NavDropdown.Item href="/buen-treino/#/login">
+                Cerrar Sesión
+              </NavDropdown.Item>
             </NavDropdown>
           </Navbar.Collapse>
         ) : (
-          <a className="text-start small" href="buen-treino/#/home">
+          <a className="text-start small" href="/buen-treino/#/home">
             ingreso demo
           </a>
         )}
