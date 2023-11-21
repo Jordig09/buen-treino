@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/buen-treino/static/css/main.f1abcf41.css",
+    "main.js": "/buen-treino/static/js/main.c4d07d15.js",
+    "static/media/trainerMan2.png": "/buen-treino/static/media/trainerMan2.431beeccda335c9c0cf4.png",
+    "static/media/101PaloAlto.png": "/buen-treino/static/media/101PaloAlto.526c36f43ad38d0ad47f.png",
+    "static/media/Trainer2.png": "/buen-treino/static/media/Trainer2.6d7b0e4c01e2695088fb.png",
+    "static/media/espalda_650px.png": "/buen-treino/static/media/espalda_650px.561fb929adb5e68bd34b.png",
+    "static/media/frente_650px.png": "/buen-treino/static/media/frente_650px.ac22239faa80af693fd8.png",
+    "static/media/postit.png": "/buen-treino/static/media/postit.cbc670ecb2dcfb418584.png",
+    "static/media/postit3.png": "/buen-treino/static/media/postit3.baf1ebc97a14df7c4fcd.png",
+    "static/media/postit2.png": "/buen-treino/static/media/postit2.cfded8d3e98e86ac0e4e.png",
+    "static/media/tape1.png": "/buen-treino/static/media/tape1.0029adb45b8b1006687b.png",
+    "static/media/tape3.png": "/buen-treino/static/media/tape3.ced5e523e2ea1c12fa0e.png",
+    "static/media/bg.png": "/buen-treino/static/media/bg.2eb9339b4964a71e8017.png",
+    "static/media/running.png": "/buen-treino/static/media/running.dafd381b52597ac7a143.png",
+    "static/media/tape2.png": "/buen-treino/static/media/tape2.6e04f68a01f727a1c4db.png",
+    "index.html": "/buen-treino/index.html",
+    "main.f1abcf41.css.map": "/buen-treino/static/css/main.f1abcf41.css.map",
+    "main.c4d07d15.js.map": "/buen-treino/static/js/main.c4d07d15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1abcf41.css",
+    "static/js/main.c4d07d15.js"
+  ]
+}
