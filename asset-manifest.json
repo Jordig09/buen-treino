@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/buen-treino/static/css/main.f1abcf41.css",
-    "main.js": "/buen-treino/static/js/main.131bd83c.js",
+    "main.js": "/buen-treino/static/js/main.007c79fb.js",
     "static/media/trainerMan2.png": "/buen-treino/static/media/trainerMan2.431beeccda335c9c0cf4.png",
     "static/media/101PaloAlto.png": "/buen-treino/static/media/101PaloAlto.526c36f43ad38d0ad47f.png",
     "static/media/Trainer2.png": "/buen-treino/static/media/Trainer2.6d7b0e4c01e2695088fb.png",
@@ -17,10 +17,10 @@
     "static/media/tape2.png": "/buen-treino/static/media/tape2.6e04f68a01f727a1c4db.png",
     "index.html": "/buen-treino/index.html",
     "main.f1abcf41.css.map": "/buen-treino/static/css/main.f1abcf41.css.map",
-    "main.131bd83c.js.map": "/buen-treino/static/js/main.131bd83c.js.map"
+    "main.007c79fb.js.map": "/buen-treino/static/js/main.007c79fb.js.map"
   },
   "entrypoints": [
     "static/css/main.f1abcf41.css",
-    "static/js/main.131bd83c.js"
+    "static/js/main.007c79fb.js"
   ]
 }
