@@ -6,7 +6,7 @@ import Login from "./Login";
 import BackButton from "./BackButton";
 import Register from "./Register";
 import Password from "./Password";
-import bgTrainer from "../../img/Stock/trainerMan2.png";
+import bgTrainer from "../../img/Stock/trainerMan3.png";
 
 function LoginCard() {
   const [currentState, setCurrentState] = useState("home");

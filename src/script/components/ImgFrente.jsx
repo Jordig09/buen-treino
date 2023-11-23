@@ -279,7 +279,7 @@ function ImgFrente() {
         {showPolygons.map((show, index) => (
           <img
             key={`front${index +1}`}
-            src={`/show/f0${index + 1}.png`}
+            src={`show/f0${index + 1}.png`}
             alt={`Frente ${index + 1}`}
             style={{ 
               display: show ? "block" : "none",

@@ -5,7 +5,7 @@ import NavBar from "../../components/NavBar";
 import LoginCard from "../../components/LoginCard";
 import Footer from "../../components/Footer";
 import SideLog from "../../components/SideLog";
-import gradientbg from "../../../img/Gradient/101PaloAlto.png";
+import gradientbg from "../../../img/Gradient/101PaloAltoLight.jpg";
 import running from "../../../img/runningT.png";
 
 function Login() {
