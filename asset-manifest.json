@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/buen-treino/static/css/main.f1abcf41.css",
-    "main.js": "/buen-treino/static/js/main.599e8c8d.js",
-    "static/media/trainerMan3.png": "/buen-treino/static/media/trainerMan3.1506c3f9935d23d48856.png",
+    "main.js": "/buen-treino/static/js/main.77544f9b.js",
+    "static/media/trainerMan3.png": "/buen-treino/static/media/trainerMan3.2a66ba097650519cc7a9.png",
     "static/media/Trainer2.png": "/buen-treino/static/media/Trainer2.6d7b0e4c01e2695088fb.png",
     "static/media/101PaloAltoLight.jpg": "/buen-treino/static/media/101PaloAltoLight.0a2f18967226083602dd.jpg",
     "static/media/espalda_650px.png": "/buen-treino/static/media/espalda_650px.561fb929adb5e68bd34b.png",
@@ -18,10 +18,10 @@
     "static/media/runningT.png": "/buen-treino/static/media/runningT.ac1d38e40f33eee75ac7.png",
     "index.html": "/buen-treino/index.html",
     "main.f1abcf41.css.map": "/buen-treino/static/css/main.f1abcf41.css.map",
-    "main.599e8c8d.js.map": "/buen-treino/static/js/main.599e8c8d.js.map"
+    "main.77544f9b.js.map": "/buen-treino/static/js/main.77544f9b.js.map"
   },
   "entrypoints": [
     "static/css/main.f1abcf41.css",
-    "static/js/main.599e8c8d.js"
+    "static/js/main.77544f9b.js"
   ]
 }
