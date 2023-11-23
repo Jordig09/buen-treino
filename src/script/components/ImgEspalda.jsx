@@ -337,7 +337,7 @@ function ImgEspalda() {
         {showPolygonsB.map((show, index) => (
           <img
             key={`rear${index + 1}`}
-            src={`/show/r0${index + 1}.png`}
+            src={`show/r0${index + 1}.png`}
             alt={`Espalda ${index + 1}`}
             style={{
               position: "absolute",
