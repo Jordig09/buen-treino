@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "fitapp-g09",
+  "private_key_id": "96e508c1ba1cbadeb72fedac06460c5924845abc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDIJe80Y6QRQULq\nqQO7FauejXxGuDRo7276VyC8tTWDPBANWv6V0u2XengCABRhRyLGKea5QXHHa4ML\nwIlhCBhstAV0xyuHU5SIxh0aqCwk6nqIPkAIEAdqxlpV7AoXXlinLuBDxWXG4HWo\nauGvv4UAsriScNS0nSrKugp/GRzNURmsar/41zsxuP+3WZ+X1bRPudMIlPSI/X8Q\ncalwLkZ0AklGFqpUxaz7GGZrE+rT+Bhvh5P6ElChTVwBrn4SzRh3hplGiAhwWyW2\nlKZI9m8jiSh4sha3Vqp+24vayHq1jis1RB+2Nq5VTebQXKPdkzOZC/aBvylyk4iS\nLbC8rYkTAgMBAAECggEAGZHDE/HQ0YWBW4I5IEr98FUJ9eztgSRpjKDZ5VHPItNn\nB5XC5Xgbc1kpgLPq5pyUZDWRLMSgGQZyqOsxgcxrdmOvOMKDHJhAZxLMQA4RCaxM\n+B/fxUfq8qihfM2ZYm/iqoUSEIZk4LnnPhtddrrkbnjmnIq+mc5kW57V3XPjWpVS\nVjFUfAV5PZRl+0HpqgwkgWVGO/aoYPku63UoAnLH174MBj7GWm762urQNQvfFLyv\niJWYNj+jSsCzQt4abWTmrsozol9os/QLpDbLiLj5ZGnOV0QydzyxuMIPFTPxekCk\nraX89INhCbKH/GmLzzBJJUtu/9O58l5ipzNcwBzF4QKBgQDyWpfT+xsP997EK1vT\n2fCE+Rv6j1nKSud3/u52B2PjvKZ/eSsDb2t9TESG4FjBnAPTMH90jalDZP5hidCo\njEmt+4R6/9UmXZa4pY7LJYjpByGhckUp0mAklJ/sAYlRaK0BpGJRYrRyF3wMqC8z\nhB0o5v+xcmNX/XF2q4HkMQvxcwKBgQDTavfCx2MPwGYxlukNYABZr3KLrIaxejpL\nWzL0T9ytNvTv0CrxHQ1W1skjGsIg5gRQlO6RM+EfoWyuzhxx/+v4H4yR7cBCBqLd\nnCG0E56gOf8Gcxer6/mwYwvqO5RLpZPiBhdXhaDbHRIGtVT7hor92dsYFu9HfpIt\nXwjAnxeh4QKBgCZewXsGXpqAm/xjAP7hmnrzFcLtv0GP6mXNLuPw95eu3o2AGZdJ\npLMJyC+yhVrh4JknLIa/hvTsoHnA4BBPZbrt/2OZ7Z1NY/eH/rubDboXLvPoq5qb\nfC1OeqNa+uqwr/N6mzZXcko9/Z3jYtW9LQC00fa+LYxYzAYF0WLXgRSRAoGAEqvz\nzcQGP7HiVKbbVk8QONuB5kwKaUo+M8GOMn2LI9EiuLtNz5WdQ/ocMXl/g6BM6UD+\nANzwGPcMvjN916Oel39RzuGMhUhIwgG0CE9jRwtYNp2bjZd9qdJVjw5L/pJVCTU4\ngoZOuotKuETziHNNezXuX6ZG462OA2vNPhXO5IECgYEAsgbkIYT6QXkgOUR5GFfB\n4oAICpBM47egJ6hADASufXXbZkldx5AqFdRp2soHlr6r5HicgKUZc/qHS66lFjJf\nJdvyNTDPTytNtYtit2EeVl4rw8XS7Wn+hvLFhEx/bjP2jSA3x+a2IOPWlqJ+ZVTR\njMr2wbnKhOS7dk911J+ZLxk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheets-api@fitapp-g09.iam.gserviceaccount.com",
+  "client_id": "114415842428720821411",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheets-api%40fitapp-g09.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

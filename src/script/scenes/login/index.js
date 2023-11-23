@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import NavBar from "../../components/NavBar";
 import LoginCard from "../../components/LoginCard";
 import Footer from "../../components/Footer";
 import SideLog from "../../components/SideLog";
 import gradientbg from "../../../img/Gradient/101PaloAlto.png";
+import running from "../../../img/runningT.png";
 
 function Login() {
   const isMdScreen = useMediaQuery({ maxWidth: 1200, minWidth: 768 });
@@ -29,7 +30,19 @@ function Login() {
             zIndex: "1",
           }}
           className="d-none d-md-block"
-        ></div>
+        >
+          <Image
+            src={running}
+            style={{
+              maxWidth: "40vw",
+              backgroundSize: "cover",
+              position: "absolute",
+              bottom: "0",
+              left: "150",
+              backgroundRepeat: "none",
+            }}
+          />
+        </div>
         <Row className=" justify-content-end m-0">
           <Col
             sm={4}
@@ -58,7 +71,7 @@ function Login() {
           </Col>
         </Row>
       </Container>
-      <Footer visibility="invisible"/>
+      <Footer visibility="invisible" />
     </>
   );
 }

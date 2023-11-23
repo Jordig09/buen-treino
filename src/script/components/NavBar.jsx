@@ -32,9 +32,15 @@ function NavBar({ login = true, usuario = "Usuario" }) {
               id="basic-nav-dropdown"
               className="bg-dark text-white"
             >
-              <NavDropdown.Item href="#action/1">Mi Cuenta</NavDropdown.Item>
-              <NavDropdown.Item href="#action/2">Calendario</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3">Grupos</NavDropdown.Item>
+              <NavDropdown.Item href="#action/1" disabled>
+                Mi Cuenta
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/2" disabled>
+                Calendario
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3" disabled>
+                Grupos
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/buen-treino/#/login">
                 Cerrar Sesión
